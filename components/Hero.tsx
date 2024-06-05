@@ -1,5 +1,8 @@
+import Link from "next/link";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
+import MagicButton from "./ui/MagicButton";
+import { FaLocationArrow } from "react-icons/fa6";
 
 const Hero = () => {
   return (
@@ -24,12 +27,22 @@ const Hero = () => {
             Dynamic Web Magic with Next.js
           </h2>
           <TextGenerateEffect
+            words="Transforming Concepts into Seamless User Experiences"
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
-            words="Transforming Concepts into Seamless Experiences"
           />
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            Hi, I'm Tomato Bedding, The Professional Bedding Equipments
+            Hi! I&apos;m Adrian, a Next.js Developer based in Croatia.
           </p>
+
+          <Link
+            href={"#about"}
+          >
+            <MagicButton
+              title="Show my work"
+              icon={<FaLocationArrow />}
+              position="right"
+            />
+          </Link>
         </div>
       </div>
     </div>
